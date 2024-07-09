@@ -7,7 +7,6 @@ import OnboardingItem from './OnboardingItem';
 import Paginator from './Paginator';
 import items from './items';
 import NextButton from './NextButton';
-import Welcome from '../Welcome/Welcome';
 
 import style from './style';
 import globalStyle from '../../assets/styles/globalStyle';
@@ -29,7 +28,7 @@ const Onboarding = () => {
     if (currentIndex < items.length - 1) {
       itemsRef.current.scrollToIndex({index: currentIndex + 1});
     } else {
-      navigation.navigate(Welcome);
+      navigation.navigate('Welcome');
     }
   };
 

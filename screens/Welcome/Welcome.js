@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import style from './style';
 import globalStyle from '../../assets/styles/globalStyle';
-import SignIn from '../SignIn/SignIn';
 
 const Welcome = ({navigation}) => {
   return (
@@ -32,7 +31,7 @@ const Welcome = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={{...style.loginButton}}
-            onPress={() => navigation.navigate(SignIn)}>
+            onPress={() => navigation.navigate('SignIn')}>
             <Text style={{...style.login}}>Login</Text>
           </TouchableOpacity>
         </View>

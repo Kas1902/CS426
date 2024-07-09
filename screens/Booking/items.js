@@ -1,6 +1,4 @@
 /* eslint-disable no-alert */
-import TransportBooking from '../Transport/TransportBooking';
-
 export default async function getItems(navigation) {
   return [
     {
@@ -14,7 +12,7 @@ export default async function getItems(navigation) {
       id: '2',
       image: require('../../assets/images/Booking/Transport.png'),
       onPress: () => {
-        navigation.navigate(TransportBooking);
+        navigation.navigate('TransportBooking');
       },
     },
     {

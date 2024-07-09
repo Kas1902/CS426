@@ -14,11 +14,12 @@ import {
   faFacebookF,
   faGoogle,
 } from '@fortawesome/free-brands-svg-icons';
+import {useNavigation} from '@react-navigation/native';
 
 import style from './style';
-import Home from '../Home/Home';
 
-const SignIn = ({navigation}) => {
+const SignIn = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView>
       <StatusBar hidden={true} />
@@ -46,7 +47,7 @@ const SignIn = ({navigation}) => {
           />
           <TouchableOpacity
             style={{...style.signInButton}}
-            onPress={() => navigation.navigate(Home)}>
+            onPress={() => navigation.navigate('Main')}>
             <Text style={{...style.signIn}}>Sign In</Text>
           </TouchableOpacity>
           <View style={{...style.otherOptionsContainer}}>

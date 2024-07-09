@@ -16,10 +16,10 @@ const Booking = () => {
     const fetchData = async () => {
       try {
         const itemsData = await getItems(navigation);
-        console.log('Fetched items:', itemsData); // Log fetched data for debugging
+        console.log('Fetched items:', itemsData);
         setItems(itemsData);
       } catch (error) {
-        console.error('Error fetching items:', error); // Log any errors during fetch
+        console.error('Error fetching items:', error);
       }
     };
 
