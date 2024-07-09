@@ -6,9 +6,7 @@ import style from './style';
 const Services = props => {
   return (
     <View style={style.container}>
-      <TouchableOpacity
-        style={style.image}
-        opPress={() => alert('The function is not available yet.')}>
+      <TouchableOpacity style={style.image} opPress={props.onPress}>
         <Image source={props.image} />
       </TouchableOpacity>
       <Text style={style.text}>{props.title}</Text>

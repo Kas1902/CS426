@@ -6,4 +6,5 @@ export const Routes = {
   Onboarding: 'Onboarding',
   Account: 'Account',
   Booking: 'Booking',
+  Transport: 'Transport',
 };

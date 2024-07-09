@@ -20,7 +20,7 @@ const style = StyleSheet.create({
   image: {
     backgroundColor: '#01635D',
     borderRadius: horizontalScale(15),
-    padding: horizontalScale(6),
+    padding: horizontalScale(12),
   },
 });
 
