@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState, useRef} from 'react';
-import {View, StatusBar, StyleSheet, FlatList, Animated} from 'react-native';
+import {View, StatusBar, FlatList, Animated} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import OnboardingItem from './OnboardingItem';
@@ -8,6 +8,8 @@ import Paginator from './Paginator';
 import items from './items';
 import NextButton from './NextButton';
 import Welcome from '../Welcome/Welcome';
+
+import style from './style';
 
 const Onboarding = () => {
   const navigation = useNavigation();
@@ -31,7 +33,7 @@ const Onboarding = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={style.container}>
       <StatusBar hidden />
       <View style={{flex: 3}}>
         <FlatList
@@ -61,13 +63,5 @@ const Onboarding = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default Onboarding;
