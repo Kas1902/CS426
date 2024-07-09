@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {scaleFontSize} from '../../assets/styles/scaling';
+import {horizontalScale, scaleFontSize} from '../../assets/styles/scaling';
 import {getFontFamily} from '../../assets/fonts/helper';
 
 const style = StyleSheet.create({
@@ -26,6 +26,13 @@ const style = StyleSheet.create({
     fontSize: scaleFontSize(14),
     lineHeight: scaleFontSize(20),
     color: '#727272',
+  },
+  title5: {
+    marginLeft: horizontalScale(8),
+    fontFamily: getFontFamily('Poppins', 500),
+    fontSize: scaleFontSize(14),
+    lineHeight: scaleFontSize(20),
+    color: '#050505',
   },
 });
 

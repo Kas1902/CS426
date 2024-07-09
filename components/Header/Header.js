@@ -13,6 +13,8 @@ const Header = props => {
         return style.title3;
       case 4:
         return style.title4;
+      case 5:
+        return style.title5;
     }
   };
   return (

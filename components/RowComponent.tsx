@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {View, StyleProp, ViewStyle} from 'react-native';
 import React from 'react';
 import {horizontalScale} from '../assets/styles/scaling';
