@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setHideSplashScreen(true);
-    }, 10000);
+    }, 1000);
   }, []);
 
   return (

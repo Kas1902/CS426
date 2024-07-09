@@ -9,6 +9,8 @@ const Header = props => {
         return style.title1;
       case 2:
         return style.title2;
+      case 3:
+        return style.title3;
     }
   };
   return (

@@ -1,10 +1,25 @@
+/* eslint-disable no-alert */
 import React from 'react';
-import {SafeAreaView, StatusBar, View} from 'react-native';
-import style from './style';
+import {
+  SafeAreaView,
+  StatusBar,
+  View,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import Search from '../../components/Search/Search';
-import globalStyle from '../../assets/styles/globalStyle';
 import Header from '../../components/Header/Header';
-import Services from '../../components/Services/Services';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
+  faBuilding,
+  faChampagneGlasses,
+  faEarth,
+  faPlaneDeparture,
+} from '@fortawesome/free-solid-svg-icons';
+
+import style from './style';
+
+import globalStyle from '../../assets/styles/globalStyle';
 import Booking from '../Booking/Booking';
 
 const Home = ({navigation}) => {
@@ -21,28 +36,54 @@ const Home = ({navigation}) => {
         <View style={style.bookingContainer}>
           <Header title={'Booking Services'} type={2} />
           <View style={style.servicesContainer}>
-            <Services
-              title={'Trips'}
-              image={require('../../assets/images/Home/trip.png')}
-              onPress={() => {
-                alert('The function is not available yet.');
-              }}
-            />
-            <Services
-              title={'Hotel'}
-              image={require('../../assets/images/Home/hotel.png')}
-            />
-            <Services
-              title={'Transport'}
-              image={require('../../assets/images/Home/transport.png')}
-              onPress={() => {
-                navigation.navigate(Booking);
-              }}
-            />
-            <Services
-              title={'Events'}
-              image={require('../../assets/images/Home/event.png')}
-            />
+            <View style={style.container}>
+              <TouchableOpacity
+                style={style.image}
+                onPress={() => {
+                  alert('This function is not available yet');
+                }}>
+                <FontAwesomeIcon icon={faEarth} size={32} color={'#fff'} />
+              </TouchableOpacity>
+              <Text style={style.text}>Trips</Text>
+            </View>
+            <View style={style.container}>
+              <TouchableOpacity
+                style={style.image}
+                onPress={() => {
+                  alert('This function is not available yet');
+                }}>
+                <FontAwesomeIcon icon={faBuilding} size={32} color={'#fff'} />
+              </TouchableOpacity>
+              <Text style={style.text}>Hotel</Text>
+            </View>
+            <View style={style.container}>
+              <TouchableOpacity
+                style={style.image}
+                onPress={() => {
+                  navigation.navigate(Booking);
+                }}>
+                <FontAwesomeIcon
+                  icon={faPlaneDeparture}
+                  size={32}
+                  color={'#fff'}
+                />
+              </TouchableOpacity>
+              <Text style={style.text}>Transport</Text>
+            </View>
+            <View style={style.container}>
+              <TouchableOpacity
+                style={style.image}
+                onPress={() => {
+                  alert('This function is not available yet');
+                }}>
+                <FontAwesomeIcon
+                  icon={faChampagneGlasses}
+                  size={32}
+                  color={'#fff'}
+                />
+              </TouchableOpacity>
+              <Text style={style.text}>Events</Text>
+            </View>
           </View>
         </View>
       </View>

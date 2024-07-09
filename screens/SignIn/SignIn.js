@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Image,
   SafeAreaView,
   StatusBar,
   TouchableOpacity,
@@ -8,6 +7,14 @@ import {
   Text,
   TextInput,
 } from 'react-native';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faChevronLeft} from '@fortawesome/free-solid-svg-icons';
+import {
+  faApple,
+  faFacebookF,
+  faGoogle,
+} from '@fortawesome/free-brands-svg-icons';
+
 import style from './style';
 import Home from '../Home/Home';
 
@@ -19,7 +26,7 @@ const SignIn = ({navigation}) => {
         <TouchableOpacity
           style={{...style.chevron}}
           onPress={() => navigation.goBack()}>
-          <Image source={require('../../assets/images/Chevron.png')} />
+          <FontAwesomeIcon icon={faChevronLeft} size={20} color="#000" />
         </TouchableOpacity>
         <View style={{...style.welcomeContainer}}>
           <Text style={{...style.welcomeBack}}>Welcome back!</Text>
@@ -58,25 +65,13 @@ const SignIn = ({navigation}) => {
           </View>
           <View style={{...style.socialLogInContainer}}>
             <TouchableOpacity style={{...style.socialButton}}>
-              <Image
-                resizeMode="contain"
-                style={{...style.image}}
-                source={require('../../assets/images/SignIn/Facebook.png')}
-              />
+              <FontAwesomeIcon icon={faFacebookF} size={32} color="#FEA36B" />
             </TouchableOpacity>
             <TouchableOpacity style={{...style.socialButton}}>
-              <Image
-                resizeMode="contain"
-                style={{...style.image}}
-                source={require('../../assets/images/SignIn/Google.png')}
-              />
+              <FontAwesomeIcon icon={faGoogle} size={32} color="#FEA36B" />
             </TouchableOpacity>
             <TouchableOpacity style={{...style.socialButton}}>
-              <Image
-                resizeMode="contain"
-                style={{...style.image}}
-                source={require('../../assets/images/SignIn/Apple.png')}
-              />
+              <FontAwesomeIcon icon={faApple} size={40} color="#FEA36B" />
             </TouchableOpacity>
           </View>
         </View>

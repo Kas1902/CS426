@@ -8,6 +8,7 @@ import SignIn from '../screens/SignIn/SignIn';
 import Home from '../screens/Home/Home';
 import Splash from '../screens/Splash/Splash';
 import Booking from '../screens/Booking/Booking';
+import TransportBooking from '../screens/Transport/TransportBooking';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,10 @@ const MainNavigation = () => {
       <Stack.Screen name={Routes.SignIn} component={SignIn} />
       <Stack.Screen name={Routes.Home} component={Home} />
       <Stack.Screen name={Routes.Booking} component={Booking} />
+      <Stack.Screen
+        name={Routes.TransportBooking}
+        component={TransportBooking}
+      />
     </Stack.Navigator>
   );
 };
