@@ -21,6 +21,12 @@ const style = StyleSheet.create({
     lineHeight: scaleFontSize(29),
     color: '#050505',
   },
+  title4: {
+    fontFamily: getFontFamily('Poppins', 600),
+    fontSize: scaleFontSize(14),
+    lineHeight: scaleFontSize(20),
+    color: '#727272',
+  },
 });
 
 export default style;

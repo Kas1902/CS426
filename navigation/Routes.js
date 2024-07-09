@@ -7,4 +7,6 @@ export const Routes = {
   Account: 'Account',
   Booking: 'Booking',
   TransportBooking: 'TransportBooking',
+  Profile: 'Profile',
+  Announcement: 'Announcement',
 };
