@@ -21,19 +21,19 @@ const TransportFlight = ({navigation}) => {
   const items = [
     {
       id: 1,
-      image: require('../../assets/images/Flights/flight.png'),
+      image: require('../../assets/images/Flights/flight.jpg'),
     },
     {
       id: 2,
-      image: require('../../assets/images/Flights/flight.png'),
+      image: require('../../assets/images/Flights/flight.jpg'),
     },
     {
       id: 3,
-      image: require('../../assets/images/Flights/flight.png'),
+      image: require('../../assets/images/Flights/flight.jpg'),
     },
     {
       id: 4,
-      image: require('../../assets/images/Flights/flight.png'),
+      image: require('../../assets/images/Flights/flight.jpg'),
     },
   ];
 
