@@ -20,7 +20,6 @@ import {
 import style from './style';
 
 import globalStyle from '../../assets/styles/globalStyle';
-import Booking from '../Booking/Booking';
 
 const Home = ({navigation}) => {
   return (
@@ -60,7 +59,7 @@ const Home = ({navigation}) => {
               <TouchableOpacity
                 style={style.image}
                 onPress={() => {
-                  navigation.navigate(Booking);
+                  navigation.navigate('BookingNavigator', {screen: 'Booking'});
                 }}>
                 <FontAwesomeIcon
                   icon={faPlaneDeparture}
