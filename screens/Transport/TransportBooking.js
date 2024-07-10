@@ -220,11 +220,11 @@ const TransportBooking = ({navigation}) => {
         <TouchableOpacity
           style={style.searchButton}
           onPress={() => {
-            selectedTransport === 'Flight'
-              ? passenger > 0
+            passenger > 0
+              ? selectedTransport === 'Flight'
                 ? navigation.navigate('TransportFlight')
-                : alert('Number of passengers must be greater than zero!')
-              : alert('Coming Soon!');
+                : alert('Coming Soon!')
+              : alert('Number of passengers must be greater than zero!');
           }}>
           <Text style={style.searchButtonText}>Search</Text>
         </TouchableOpacity>

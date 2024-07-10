@@ -106,6 +106,23 @@ const style = StyleSheet.create({
     fontFamily: getFontFamily('Poppins', 700),
     textAlign: 'center',
   },
+  item: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  pickerItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: verticalScale(16),
+  },
+  ticketImage: {
+    width: '100%',
+    marginBottom: verticalScale(16),
+  },
+  ticketContainer: {
+    marginTop: verticalScale(16),
+  },
 });
 
 export default style;
