@@ -1,7 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable no-alert */
 import React from 'react';
-import {SafeAreaView, StatusBar, View, Image, Pressable} from 'react-native';
+import {
+  SafeAreaView,
+  StatusBar,
+  View,
+  Image,
+  Pressable,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import Header from '../../components/Header/Header';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {
@@ -14,6 +22,7 @@ import {faGears} from '@fortawesome/free-solid-svg-icons/faGears';
 import {useNavigation} from '@react-navigation/native';
 
 import style from './style';
+import {faRightFromBracket} from '@fortawesome/free-solid-svg-icons';
 
 const Account = () => {
   const navigation = useNavigation();
@@ -70,6 +79,18 @@ const Account = () => {
           <FontAwesomeIcon icon={faGears} size={24} color={'#FEA36B'} />
           <Header title={'Settings'} type={5} />
         </Pressable>
+        <TouchableOpacity
+          style={{...style.endButton}}
+          onPress={() => navigation.navigate('Welcome')}>
+          <View style={{...style.endIcon}}>
+            <FontAwesomeIcon
+              icon={faRightFromBracket}
+              size={24}
+              color={'#FF3636'}
+            />
+            <Text style={{...style.end}}>End session</Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
