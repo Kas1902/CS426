@@ -29,11 +29,11 @@ import {
 import Header from '../../components/Header/Header';
 
 const TransportBooking = ({navigation}) => {
-  const [from, setFrom] = useState('');
-  const [to, setTo] = useState('');
+  const [from, setFrom] = useState('Viet Nam (VN)');
+  const [to, setTo] = useState('Egypt (EP)');
   const [selectedClass, setSelectedClass] = useState('Economy');
   const [selectedTransport, setSelectedTransport] = useState('Flight');
-  const [passenger, setPassenger] = useState(1);
+  const [passenger, setPassenger] = useState(0);
 
   const switchInput = () => {
     const temp = from;

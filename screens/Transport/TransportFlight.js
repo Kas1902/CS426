@@ -15,6 +15,7 @@ import globalStyle from '../../assets/styles/globalStyle';
 import {FlatList} from 'react-native-gesture-handler';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faSliders} from '@fortawesome/free-solid-svg-icons';
+import {getFontFamily} from '../../assets/fonts/helper';
 
 const TransportFlight = ({navigation}) => {
   const items = [
@@ -73,7 +74,13 @@ const TransportFlight = ({navigation}) => {
             marginTop: 16,
             alignItems: 'center',
           }}>
-          <Text>{items.length} flights available</Text>
+          <Text
+            style={{
+              fontSize: 14,
+              fontFamily: getFontFamily('Poppins', 400),
+            }}>
+            {items.length} flights available
+          </Text>
           <TouchableOpacity
             style={{backgroundColor: '#FEA36B', padding: 8, borderRadius: 12}}
             onPress={() => navigation.navigate('TransportFilter')}>

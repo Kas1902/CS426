@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import style from './style';
 
 // Step 1: Add initialValue to the component's props
-const InputWithLabel = ({label, initialValue = '', onChange}) => {
+const InputWithLabel = ({label, initialValue, onChange, placeholder}) => {
   const textInputRef = useRef(null);
   const [search, setSearch] = useState(initialValue);
 
@@ -30,7 +30,7 @@ const InputWithLabel = ({label, initialValue = '', onChange}) => {
       <TextInput
         ref={textInputRef}
         style={style.searchInput}
-        placeholder="Search"
+        placeholder={placeholder}
         // Step 3: Ensure the value prop is set to the search state variable
         value={search}
         // The onChangeText prop already updates the search state with user input
