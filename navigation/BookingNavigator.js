@@ -5,8 +5,8 @@ import Booking from '../screens/Booking/Booking';
 import TransportBooking from '../screens/Transport/TransportBooking';
 import TransportSelectSeats from '../screens/Transport/TransportSelectSeats';
 import TransportFilter from '../screens/Transport/TransportFilter';
-import TransportBoadingPass from '../screens/Transport/TransportBoardingPass';
 import TransportFlight from '../screens/Transport/TransportFlight';
+import TransportBoardingPass from '../screens/Transport/TransportBoardingPass';
 
 const BookingNavigator = () => {
   const BookingStack = createNativeStackNavigator();
@@ -20,8 +20,8 @@ const BookingNavigator = () => {
       />
       <BookingStack.Screen name="TransportFlight" component={TransportFlight} />
       <BookingStack.Screen
-        name="TransportBoardingPass"
-        component={TransportBoadingPass}
+        name="BoardingPass"
+        component={TransportBoardingPass}
       />
       <BookingStack.Screen name="TransportFilter" component={TransportFilter} />
       <BookingStack.Screen
